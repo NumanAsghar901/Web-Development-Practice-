@@ -1,0 +1,21 @@
+.card{
+    background-color: #5cb9b9;
+    width: 200px;
+    height: 350px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+   
+  
+   
+}
+
+#img{
+    
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #navi{
+        background-color: black;
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+
+       
+
+    }
+    #navi span{
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+     
+
+    }
+    #navi span:hover{
+        background-color: rgb(10, 241, 14);
+        color: black;
+        transition-timing-function: linear;
+
+    }
+    #navi #about{
+        margin-left: 500px;
+    }
+
+    #atm{
+        background-color: rgb(177, 131, 131);
+        display: inline-block;
+        padding: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        
+
+    }
+    #atm input{
+        padding: 7px;
+        width: 300px;
+        margin-bottom: 10px;
+
+    }
+    #atm button{
+        padding: 10px;
+        width: 150px;
+        cursor: pointer;
+        background-color: rgb(241, 241, 241);
+        border: none;
+        transition: background-color 0.3s;
+    }
+    #atm button:hover{
+        background-color: rgb(10, 241, 14);
+        color: black;
+        transform:scalex(1.3);
+        transition:0.4s;
+       
+         
+    }
+
+    #counter{
+        margin-top: 20px;
+        background-color: rgb(228, 220, 220);
+        display: inline-block;
+        padding: 20px;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+
+   
+
+</style>
+
+<body>
+    
+    <p id="p1">HEllo Nomi <span>Kesay ho</span></p>
+    <p id="p2">HI there!</p>
+
+    <button id="btn">Click me!</button>
+
+    <div id="div1">
+        <p id="para1">Paragraph 1</p>
+        <p id="para2">Paragraph 2</p>
+        <p id="para3">Paragraph 3</p>
+    </div>
+
+    <div id="navi">
+        <span>Home </span>
+        <span>News </span>
+        <span>Contact </span>
+
+        <span id="about">About </span>
+    </div>
+
+
+    <div id="atm">
+        <input id="amount" type="text" placeholder="Enter amount">
+        <button id="show">1. Check Balance</button>
+        <button id="withdraw">2. Withdraw</button>
+        <button id="deposit">3. Deposit</button>
+        <span id="greet"></span>
+
+    </div>
+
+    <ol style="list-style: none; margin-top: 20px; display: flex; gap: 50px; ">
+    <li>Check Balance</li>
+    <li>Withdraw</li>
+    </ol>
+
+   <form id="myform">
+    <input type="text" placeholder="Enter your name"><br>
+    <input type="text" placeholder="Enter your email"><br>
+    <input type="checkbox"> Done<br>
+    <select>
+        <option value="option1">cake</option>
+        <option value="option2">apple</option>
+        <option value="option3">Option 3</option>
+    </select>
+    <button type="submit">Submit</button>
+    
+   </form>
+ <p id="nil"></p>
+ <p id="clockDisplay"> 00:00:00</p>
+ <p id="data">  </p>
+    
+
+<input id="task" type="Text" placeholder="Enter task" style="padding:5px; width: 300px; margin-top: 20px;">
+<button id="addTask" style="padding: 10px; cursor: pointer; background-color: rgb(241, 241, 241); border: none; transition: background-color 0.3s;">Add Task</button>
+<p id="taskList"></p><br>
+
+    <div id="counter">
+        <p id="print">You clicked 0 times</p>
+        <button id="increment">Click Me</button>
+
+
+    </div>
+    <script src="index.js">  </script>
+
+</body>
+</html>
