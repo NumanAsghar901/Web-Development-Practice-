@@ -6,7 +6,7 @@ function Showcontent(props) {
         <button onClick={function(){props.setShow(props.id)}}>
             Toggle Content
         </button>
-        {props.show === props.id && props.children}
+        {props.show === props.id ? props.children : null}
       
     </div>
   )

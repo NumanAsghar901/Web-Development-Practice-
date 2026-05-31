@@ -51,6 +51,7 @@ function App() {
 
 
 
+
       {/* <Cards name="Numan Asghar" desc="Web Developer" img={nomi} style={{"border-radius": "10px"}}/>
         Cards name="John Doe" desc="Software Engineer" img={nomi} style={{"border-radius": "10px"}}/>
         <Cards name="Jane Smith" desc="Product Manager" img={nomi} style={{"border-radius": "10px"}}/>
