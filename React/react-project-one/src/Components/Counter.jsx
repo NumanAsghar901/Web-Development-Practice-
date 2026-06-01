@@ -9,6 +9,7 @@ const Counter = (props) => {
     <div>
         {/* <p>You clicked {count}</p>
         <button onClick={function(){setCount(count+1)}}>Click Me</button> */}
+        
         {props.children}
         <button onClick={props.increment}>
             {props.text}

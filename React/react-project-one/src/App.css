@@ -1,7 +1,9 @@
-.App{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+#container{
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
 }

@@ -6,16 +6,32 @@ import nomi from './assets/nomi.jpeg'
 import Counter from './Components/Counter'
 import { useState, useEffect } from 'react'
 import Showcontent from './Components/Showcontent'
+import TimerComponent from './Components/TimerComponent'
+import RandomQuote from './Components/RandomQuote'
+import Form from './Components/Form'
+import ChildA from './Components/ChildA'
+import { createContext } from 'react'
+
+
+//const usercontext= createContext();
+const themecontext= createContext();
 
 function App() {
-  // const [count, setCount]=useState(0);
-  // function increment(){
-  //   setCount(count+1);
-  // }
+  const [count, setCount]=useState(0);
+   function increment(){
+     setCount(count+1);
+   }
 
   const [name, setName] = useState('')
 
   const [show, setShow] = useState('none')
+
+  // useEffect(function(){
+  //   alert('I will run on each render')
+  // })
+
+  //const [user, setUser] = useState('Numan Asghar')
+  const [theme, setTheme] = useState('light');
 
   return (
     <div className="App" >
@@ -32,7 +48,7 @@ function App() {
        <p>Im Parent:{name}</p>
        <Cards name={name} setName={setName} /> */}
 
-      <Showcontent id='child1' show={show} setShow={setShow}>
+      {/* <Showcontent id='child1' show={show} setShow={setShow}>
         <p>Click the button to toggle the content from child {show}</p>
       </Showcontent><br/>
       
@@ -42,7 +58,25 @@ function App() {
 
       <Showcontent id='child3' show={show} setShow={setShow}>
         <p>Click the button to toggle the content from child {show}</p>
-      </Showcontent>
+      </Showcontent> */}
+
+      {/* <button onClick={function(){setCount(count+1)}}>Click me</button>
+      {count} */}
+
+        {/* <TimerComponent/> */}
+
+        {/* <RandomQuote/> */}
+
+        {/* <Form/> */}
+
+        
+
+        <themecontext.Provider value={{theme, setTheme}}>
+          <div id="container" style={{backgroundColor:theme==='beige'?'beige':'black'}}>
+            <ChildA/>
+          </div>
+        </themecontext.Provider>
+
 
 
 
@@ -61,3 +95,4 @@ function App() {
 }
 
 export default App
+export {themecontext}
