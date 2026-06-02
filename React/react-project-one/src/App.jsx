@@ -1,6 +1,6 @@
 
 import './App.css'
-import Navbar from './Components/Navbar'
+
 import Cards from './Components/Cards'
 import nomi from './assets/nomi.jpeg'
 import Counter from './Components/Counter'
@@ -11,7 +11,16 @@ import RandomQuote from './Components/RandomQuote'
 import Form from './Components/Form'
 import ChildA from './Components/ChildA'
 import { createContext } from 'react'
-
+import { Route, Routes } from 'react-router-dom'
+import About from './Pages/About'
+import Contacts from './Pages/Contacts'
+import Home from './Pages/Home'
+import Navbar from './Components/Navbar'
+import Students from './Pages/Students'
+import StudentDetail from './Pages/StudentDetail'
+import Dashboard from './Pages/Dashboard'
+import Login from './Pages/Login'
+import axios from 'axios'
 
 //const usercontext= createContext();
 const themecontext= createContext();
@@ -33,8 +42,22 @@ function App() {
   //const [user, setUser] = useState('Numan Asghar')
   const [theme, setTheme] = useState('light');
 
+  const [quote, setQuote] = useState("");
+  const [author, setAuthor] = useState("");
+
+  async function showme(){
+    const response = await axios.get('http://localhost:5000/api/quote')
+    setQuote(response.data.text)
+    setAuthor(response.data.author)
+
+  }
+
   return (
     <div className="App" >
+
+      <button onClick={showme}>Show quote</button>
+      <p>{quote}</p>
+      <p>{author}</p>
      
 
         {/* It is state lifting where we are lifting the state up to the parent component and passing it down to the child component as props. */}
@@ -71,11 +94,28 @@ function App() {
 
         
 
-        <themecontext.Provider value={{theme, setTheme}}>
+        {/* <themecontext.Provider value={{theme, setTheme}}>
           <div id="container" style={{backgroundColor:theme==='beige'?'beige':'black'}}>
             <ChildA/>
           </div>
-        </themecontext.Provider>
+        </themecontext.Provider> */}
+
+        {/* <Navbar/>
+
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/about' element={<About/>}/>
+            <Route path='/contacts' element={<Contacts/>}/>
+
+            <Route path='/students' element={<Students/>}/>
+            <Route path='/students/:id/:name?' element={<StudentDetail/>}/>
+
+            <Route path='/dashboard' element={<Dashboard/>}/>
+            <Route path='/login' element={<Login/>}/>
+          </Routes> */}
+
+
+
 
 
 
